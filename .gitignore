@@ -1,0 +1,9 @@
+# Virtualenv
+llms/
+
+# Jupyter
+notebooks/.ipynb_checkpoints
+
+# Vector stores
+data/chroma_db/
+data/index_store/
