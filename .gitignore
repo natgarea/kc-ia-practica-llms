@@ -3,6 +3,7 @@ llms/
 
 # Jupyter
 notebooks/.ipynb_checkpoints
+.ipynb_checkpoints
 
 # Vector stores
 data/chroma_db/
