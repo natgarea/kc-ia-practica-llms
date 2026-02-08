@@ -2,6 +2,17 @@
 
 Este proyecto es un recomendador de organizaciones benéficas basado en **Retrieval Augmented Generation (RAG)**. Mi objetivo fue crear un asesor que ayude a potenciales donantes a encontrar ONGs fiables basándose en evidencia real y datos verificables.
 
+## Índice
+
+* [Estructura del repositorio](#estructura-del-repositorio)
+* [Cómo ejecutar](#cómo-ejecutar)
+* [Donor Copilot](#donor-copilot-recomendador-de-organizaciones-benéficas-con-retrieval-augmented-generation-rag)
+    * [Problema](#el-problema-que-quiero-resolver)
+    * [Alcance](#alcance-del-proyecto)
+    * [Dataset y fuentes](#dataset-y-fuentes)
+    * [Desarrollo del sistema RAG](#desarrollo-del-sistema-rag)
+    * [Conclusiones](#conclusiones)
+
 ## Estructura del repositorio
 
 He organizado el trabajo en cuatro notebooks principales:
