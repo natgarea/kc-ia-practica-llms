@@ -24,6 +24,7 @@ He organizado el trabajo en cuatro notebooks principales:
 - `03_rag_querying.ipynb` – Ejecución de consultas RAG.
 - `04_evaluation.ipynb` – Evaluación del sistema.
 - `data/` – Contiene los archivos CSV con organizaciones y los resultados de la evaluación.
+- `presentacion.pptx` – Contiene una presentación que resume este README.
 
 ---
 
