@@ -13,6 +13,8 @@ Este proyecto es un recomendador de organizaciones benéficas basado en **Retrie
     * [Desarrollo del sistema RAG](#desarrollo-del-sistema-rag)
     * [Conclusiones](#conclusiones)
 
+---
+
 ## Estructura del repositorio
 
 He organizado el trabajo en cuatro notebooks principales:
