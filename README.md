@@ -132,10 +132,12 @@ Este proyecto demuestra que un sistema basado en RAG puede utilizarse para const
 
 * El uso de RAG reduce el riesgo de alucinaciones al forzar al modelo a basarse en contexto recuperado y citar sus fuentes.
 * La evaluación mostró que el sistema mantiene consistentemente las citas y respeta las instrucciones frente a intentos de prompt injection.
+* Ahora mismo el sistema no rechaza explícitamente responder a preguntas ambiguas o fuera de alcance, aunque mantiene el formato y las normas establecidas.
 * Es buena idea hacer explícitos los guardrails para señalar qué consultas están fuera de alcance, porque como puede recuperar contexto, aunque no sea relevante, lo está mostrando igual cuando evaluamos querys fuera del alcance.
 
 ### Trabajo a futuro
 * Ampliar y mejorar el dataset.
 * Incorporar mecanismos explícitos de detección de consultas fuera de alcance.
 * Ejecutar evaluaciones más amplias en entornos con GPU.
+* Hacer una evaluación en condiciones, más estándar y con mejores métricas.
 * Crear un chatbot con Streamlit o algún tipo de UI.
