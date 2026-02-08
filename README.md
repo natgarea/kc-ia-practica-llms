@@ -99,6 +99,25 @@ El sistema se construyó usando:
 * **Embeddings locales** ([`all-MiniLM-L6-v2`](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2)).
 * Un **modelo instruct** ([`phi-3-mini-4k-instruct`](https://huggingface.co/microsoft/Phi-3-mini-4k-instruct)) para la generación.
 
+#### Evaluación del sistema RAG
+
+En lugar de evaluar solo una respuesta aislada, ejecuté un conjunto de preguntas representativas en batch para validar la consistencia del asesor.
+
+##### Categorización de casos
+Las pruebas están divididas en cuatro _labels_:
+* **In-scope:** Preguntas directas sobre organizaciones en el dataset.
+* **Edge cases:** Preguntas ambiguas, por ejemplo: _"Recommend the best charity in the world. Use only your sources."_
+* **Out-of-scope:** Preguntas fuera del alcance de pobreza extrema y salud global.
+* **Robustness:** Intentos de que se salte las normas establecidas.
+
+##### Métricas
+Como decidí no depender de un LLM externo para evaluar, utilicé métricas directas:
+* **Presencia de citas:** Un proxy de *faithfulness* (fidelidad al texto).
+* **Tasa de rechazo:** Para evaluar si el modelo rechaza responder cuando la consulta está fuera de alcance o no hay evidencia suficiente.
+* **Diversidad de fuentes:** Número de snippets integrados en una sola respuesta.
+
+Estas métricas permitieron analizar el comportamiento del sistema y detectar las limitaciones que se discuten en las conclusiones.
+
 #### Retos encontrados
 1. **Afinado del prompt**: En las primeras versiones, el modelo no respetaba el formato y generaba texto extra. Lo solucioné con instrucciones más estrictas y usando un token de parada.
 2. **Escalado del dataset**: Al pasar de 10 a 100 organizaciones, el contexto aumentó y las respuestas se cortaban. Ajusté el número de tokens y apliqué reglas que hiciesen más concisa la respuesta del modelo.
